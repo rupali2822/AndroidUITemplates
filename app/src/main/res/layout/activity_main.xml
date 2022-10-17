@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvRdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register your profile"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/tvPdetails"
+                android:layout_below="@+id/tvRdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="personal details*"
+                android:textSize="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/layName"
+                android:layout_below="@+id/tvPdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/grey"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:src="@drawable/ic_baseline_person_24"
+                    android:contentDescription="TODO" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight=".9"
+                android:layout_height="wrap_content"
+                android:hint="Name*">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etName"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layMail"
+                android:layout_below="@+id/layName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/grey"
+                android:layout_marginTop="8dp"
+                android:weightSum="1">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:backgroundTint="@color/grey"
+                android:src="@drawable/ic_baseline_email_24"
+                android:contentDescription="TODO" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight=".9"
+                android:layout_height="wrap_content"
+                android:hint="Email ID*">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etMail"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layContact"
+                android:layout_below="@+id/layMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/grey"
+                android:layout_marginTop="8dp"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:src="@drawable/ic_baseline_local_phone_24"
+                    android:contentDescription="TODO" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".9"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact*">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etContact"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+                android:id="@+id/tvDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Date of Birth"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/layDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDob"
+                android:background="#E0E2E3"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bttnDob"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:text="JAV 01 2018"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="3dp"
+                    style="?android:spinnerStyle"
+                    android:onClick="openDatePicker"/>
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="end"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:drawable/btn_dropdown"
+
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvgedr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Gender"
+                android:layout_below="@id/layDob"
+                android:layout_marginTop="8dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E2E3"
+                android:id="@+id/genderGroup"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layDob"
+                android:layout_marginTop="3dp">
+
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/male"/>
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/felame"/>
+
+
+            </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layEdu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/tvEdu"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="Select Education*"
+            android:textColor="@color/black"
+            />
+            <TextView
+                android:id="@+id/tvAvai"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="Available to work?*"
+                android:textColor="@color/black"
+
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layEduGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:id="@+id/eduGroup"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="12th"
+                />
+            <RadioButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Graduation"
+                />
+            <RadioButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Post Graduation"
+                />
+
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:id="@+id/avaiGroup"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:gravity="center"
+            >
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:text="Yes"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="No"/>
+
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+        <TextView
+                android:id="@+id/tvSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eduGroup"
+                android:text="Select skills"
+                android:layout_marginTop="8dp"/>
+
+            <!--        add chips dependency-->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipandroid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSkills"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Android"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipjava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSkills"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:chipStrokeColor="@color/black"
+                    app:chipSurfaceColor="@color/white"
+                    android:text="Java"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipkotlin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSkills"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Kotlin"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipsQLite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSkills"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="SQLite"/>
+
+            </com.google.android.material.chip.ChipGroup>
+        <TextView
+            android:id="@+id/tvCHeck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose your hobbies*"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reading"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Painting"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cooking"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+        <!--        <soup.neumorphism.NeumorphButton-->
+        <!--            android:id="@+id/Button1"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_margin="30dp"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:textSize="14sp"-->
+        <!--            app:neumorph_shapeType="flat"-->
+        <!--            app:neumorph_backgroundColor="@color/white"-->
+        <!--            android:text="Submit"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:fontFamily="sans-serif"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:layout_marginBottom="5dp"-->
+        <!--            android:gravity="center"/>-->
+
+    </LinearLayout>
+
+</ScrollView>
