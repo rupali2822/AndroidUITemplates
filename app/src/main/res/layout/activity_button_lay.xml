@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".buttonLayActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         >
     <Button
         android:id="@+id/btn1"
@@ -153,4 +157,88 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
     </RelativeLayout>
 
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neumorphism Textview"
+            android:textSize="25sp"
+            android:shadowColor="@color/blueGreen"
+            android:scrollHorizontally="true"/>
+
+        <LinearLayout
+            android:id="@+id/scnLay"
+            android:layout_below="@+id/tvScans"
+            android:layout_width="match_parent"
+            android:background="@color/cmp_bg"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:weightSum="1">
+            <soup.neumorphism.NeumorphImageButton
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_qr_code_scanner_24"
+                android:scaleType="fitXY"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                app:neumorph_shapeType="pressed"
+                />
+            <TextView
+                android:id="@+id/tvScanNo"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="match_parent"
+                android:text="747299949789"
+                android:textColor="@color/blueGreen"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/Button1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="30dp"
+            android:textSize="14sp"
+            app:neumorph_shapeType="flat"
+            app:neumorph_backgroundColor="@color/white"
+            android:text="Sample Button 1"
+            android:textColor="#308d46"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="5dp"
+            android:gravity="center"/>
+        <soup.neumorphism.NeumorphButton
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="30dp"
+            android:textSize="14sp"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_backgroundColor="@color/white"
+            android:text="Sample Button 2"
+            android:textColor="#308d46"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="5dp"
+            android:gravity="center"/>
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/Button3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="30dp"
+            android:textSize="14sp"
+            app:neumorph_shapeType="basin"
+            app:neumorph_backgroundColor="@color/white"
+            android:text="Sample Button 3"
+            android:textColor="#308d46"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="5dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
 </ScrollView>

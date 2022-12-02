@@ -193,6 +193,14 @@ toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
+                    case R.id.dashboardLay:
+                        Intent id=new Intent(DashboardActivity.this,DashboardUiActivity.class);
+                        startActivity(id);
+                        drawerLayout.closeDrawers();
+                        break;
+
+
+
                     case R.id.btnLayout:
                              //Toast.makeText(DashboardActivity.this, "menu1 is clicked", Toast.LENGTH_SHORT).show();
                         Intent i=new Intent(DashboardActivity.this,buttonLayActivity.class);

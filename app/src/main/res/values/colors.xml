@@ -13,6 +13,8 @@
     <color name="colorAccent">#55cf86</color>
     <color name="grey">#7B8788</color>
     <color name="blueGreen">#1db995</color>
+    <color name="cmp_bg">#D0D1D1</color>
+
 
     <color name="navy_500">#64869B</color>
     <color name="navy_700">#37596D</color>
